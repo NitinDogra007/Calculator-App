@@ -38,10 +38,12 @@ screen.
 
 clear.addEventListener('click', function () {
 	currentValue = '';
-	previousValueValue = '';
+	previousValue = '';
 	operator = '';
-	currentScreen.textContent = currentValue;
-	previousScreen.textContent = currentValue;
+	// currentScreen.textContent = currentValue;
+	// previousScreen.textContent = currentValue;
+	currentScreen.textContent = '';
+	previousScreen.textContent = '';
 });
 
 equal.addEventListener('click', function () {
@@ -73,6 +75,10 @@ function handleNum(num) {
     a new value when an operator is clicked. 
  */
 function handleOperator(op) {
+	if (currentValue === '') return; // Prevent operator change without current value
+	if (previousValue && currentValue) {
+		calculate(); // Calculate if there's an existing operation
+	}
 	operator = op;
 	previousValue = currentValue;
 	currentValue = '';
