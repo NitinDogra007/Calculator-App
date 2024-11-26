@@ -12,6 +12,7 @@
 } */
 * {
 	font-family: 'poppins';
+	font-size: 30px;
 }
 
 h1 {
@@ -27,14 +28,14 @@ body {
 	width: 100vw;
 	flex-direction: column;
 	overflow: hidden;
-
 	font-weight: 400;
 }
 
+/* Button Styling */
 button {
 	height: 90px;
 	width: 90px;
-	font-size: 30px;
+
 	margin: 5px 2px;
 	border-style: none;
 	border-radius: 5px;
@@ -56,4 +57,28 @@ button.operator {
 
 button:active {
 	box-shadow: none;
+}
+
+/* Screen Styling */
+.first-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.screen {
+	width: 285px;
+	border: 1px solid rgb(0, 0, 0);
+	height: 85px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin-right: 9px;
+	padding-right: 10px;
+}
+
+.previous {
+	font-size: 20px;
 }
